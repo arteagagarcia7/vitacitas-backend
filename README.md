@@ -10,6 +10,9 @@ Caracteristicas actuales del proyecto:
 * Encriptación de contraseñas por medio de token y autenticación basada en JWT.
 * CRUD de recursos y protección de rutas (aun en desarrollo).
 
+Aquí hay una vista de la API
+
+![Swagger UI](assets/swagger.png)
 
 Tecnologías Utilizadas:
 * Lenguaje: Python.
