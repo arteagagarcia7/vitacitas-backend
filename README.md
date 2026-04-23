@@ -29,8 +29,8 @@ Se implemento JSON Web Tokens para la implementación de la autenticación. En e
 ¿Cómo instalar y ejecutar el proyecto?
 
 * Primero clona el repocitorio:
-git clone *** 
-cd ***
+git clone https://github.com/arteagagarcia7/vitacitas-backend.git
+cd vitacitas-backend
 
 * Crea un entorno virtual:
 python -m venv venv 
