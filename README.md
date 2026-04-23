@@ -1,7 +1,6 @@
-VitaCitas - API
+VitaCitas Backend API
 
-VitaCitas será una aplicación que permitirá la gestón de citas médicas. Actualmente se encuentra en construcción el backend el cual se está desarrollando con FastApi.
-Con este proyecto busco seguir fortaleciendo mi aprendizaje en el mundo del desarrollo y consolidarme como un desarrollador de software, especializado en el backend.
+API REST para la gestión de citas médicas, desarrollada con FastAPI y PostgreSQL. Incluye autenticación basada en JWT y estructura modular orientada a escalabilidad. Con este proyecto busco seguir fortaleciendo mi aprendizaje en el mundo del desarrollo y consolidarme como un desarrollador de software, especializado en el backend.
 
 
 Caracteristicas actuales del proyecto:
@@ -15,47 +14,55 @@ Aquí hay una vista de la API
 ![Swagger UI](assets/swagger.png)
 
 Tecnologías Utilizadas:
-* Lenguaje: Python.
-* Framework: FastApi.
-* Base de datos: PostgreSQL.
-* Hashing de contraseñas: Libreria Passlib.
-* JWT: Python-Jose.
+- Lenguaje: Python.
+- Framework: FastAPI.
+- Base de datos: PostgreSQL.
+- Hashing de contraseñas: Libreria Passlib.
+- JWT: Python-Jose.
 
 
 ¿Cómo funciona el sistema de autenticación?
-Se implemento JSON Web Tokens para la implementación de la autenticación. En el Endpoing /login, el usuario completa su nombre, correo y contraseña; y al ejecutarse el sistema genera un token. El cliente tendrá un token por cada petición que realice. 
+El sistema utiliza JSON Web Tokens (JWT):
+
+1. El usuario inicia sesión en `/login`
+2. Se genera un token de acceso
+3. El cliente debe enviar el token en cada petición:
+
+Authorization: Bearer <token>
 
 
 ¿Cómo instalar y ejecutar el proyecto?
 
-* Primero clona el repocitorio:
+- Primero clona el repositorio:
+```bash
 git clone https://github.com/arteagagarcia7/vitacitas-backend.git
 cd vitacitas-backend
+```
 
-* Crea un entorno virtual:
+- Crea un entorno virtual:
 python -m venv venv 
 source venv/bin/activate (Si usas Linux o Mac)
 venv\Scripts\activate (Si usas Windows)
 
-* Instala las dependencias:
+- Instala las dependencias:
 pip install -r requirements.txt
 
-* Configura las variables de entorno:
+- Configura las variables de entorno:
 Crear archivo .env con lo siguiente:
 SECRET_KEY=tu_clave_secreta
 DATABASE_URL=tu_conexion_postgresql
 
-* Ejecuta el servidor:
+- Ejecuta el servidor:
 uvicorn main:app --reload
 
-* Ingresa a la documentación interactiva:
+- Ingresa a la documentación interactiva:
 http://127.0.0.1:8000/docs
 
 
 ¿Cuál es el estado actual del proyecto?
-El proyecto aún está en desarrollo, cuenta con una autenticación funcional y base para expansión a un sistema completo de agendamento de citas.
+En desarrollo. Actualmente cuenta con autenticación funcional y base sólida para expansión a un sistema completo de gestión de citas médicas.
 Proximamente se desarrollará los roles de usuario, el refresh de tokens, creación e integración del frontend usando vue.js, y despliegue en la nube.
 
 Autor:
 Carlos Andrés Arteaga
-Desarrollador en aprendizaje constante enfocado en backend y aplicaciones web.
+Desarrollador backend en formación, enfocado en aplicaciones web y buenas prácticas de desarrollo.
